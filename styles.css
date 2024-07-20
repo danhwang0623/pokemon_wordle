@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #game {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  #board {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
+    gap: 5px;
+  }
+  
+  #board div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 20px;
+  }
+  
+  .correct {
+    background-color: green;
+  }
+  
+  .present {
+    background-color: yellow;
+  }
+  
+  .absent {
+    background-color: gray;
+  }
+  
+  #hint {
+    margin-top: 20px;
+  }
+  
+  .pokemon-animation {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    animation: float 10s linear infinite;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(calc(100vh - 100px)); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Specific Pokémon animations */
+  .pokemon1 { background-image: url('assets/images/animations/typhlosion-pokemon.gif'); left: 10%; }
+  .pokemon2 { background-image: url('assets/images/animations/wooper-quagsire.gif'); left: 50%; }
+  .pokemon3 { background-image: url('assets/images/animations/spirigato.gif'); left: 90%; }
+  
