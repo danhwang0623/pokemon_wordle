@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: url('assets/images/background/pokemon_background.png') no-repeat center center fixed; /* Use the image as the background */
+    background-size: cover; /* Ensure the background covers the entire screen */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +12,7 @@ body {
   }
   
   #game {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8); /* Add some transparency to make the background visible */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -58,17 +59,27 @@ body {
     width: 100px;
     height: 100px;
     background-size: cover;
-    animation: float 10s linear infinite;
-  }
-  
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(calc(100vh - 100px)); }
-    100% { transform: translateY(0); }
   }
   
   /* Specific Pokémon animations */
-  .pokemon1 { background-image: url('assets/images/animations/typhlosion-pokemon.gif'); left: 10%; }
-  .pokemon2 { background-image: url('assets/images/animations/wooper-quagsire.gif'); left: 50%; }
-  .pokemon3 { background-image: url('assets/images/animations/spirigato.gif'); left: 90%; }
+  .pokemon1 {
+    background-image: url('assets/images/animations/gengar.gif');
+    top: 87%;
+    left: 15%;
+    width: 50px;
+    height: 50px;
+  }
   
+  .pokemon2 {
+    background-image: url('assets/images/animations/pokemons.gif');
+    top: 81%;
+    left: 50%;
+  }
+  
+  .pokemon3 {
+    background-image: url('assets/images/animations/pikachu.gif');
+    top: 87%;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+  }
